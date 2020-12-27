@@ -1,0 +1,10 @@
+version: "3"
+services:
+  phptriage:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./tdlapp_v1/tdlapp_v1/app:/srv/app/public
+    env_file:
+      - ./docker/env
